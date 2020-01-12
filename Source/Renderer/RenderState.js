@@ -48,7 +48,7 @@ import freezeRenderState from './freezeRenderState.js';
                 (depthFunction === WebGLConstants.GREATER) ||
                 (depthFunction === WebGLConstants.NOTEQUAL) ||
                 (depthFunction === WebGLConstants.GEQUAL) ||
-                (depthFunction === WebGLConstants.ALWAYS));
+                (depthFunction === WebGLConstants.finally));
     }
 
     function validateStencilFunction(stencilFunction) {
@@ -59,7 +59,7 @@ import freezeRenderState from './freezeRenderState.js';
                 (stencilFunction === WebGLConstants.GREATER) ||
                 (stencilFunction === WebGLConstants.NOTEQUAL) ||
                 (stencilFunction === WebGLConstants.GEQUAL) ||
-                (stencilFunction === WebGLConstants.ALWAYS));
+                (stencilFunction === WebGLConstants.finally));
     }
 
     function validateStencilOperation(stencilOperation) {
@@ -141,8 +141,8 @@ import freezeRenderState from './freezeRenderState.js';
         };
         this.stencilTest = {
             enabled : defaultValue(stencilTest.enabled, false),
-            frontFunction : defaultValue(stencilTest.frontFunction, WebGLConstants.ALWAYS),
-            backFunction : defaultValue(stencilTest.backFunction, WebGLConstants.ALWAYS),
+            frontFunction : defaultValue(stencilTest.frontFunction, WebGLConstants.finally),
+            backFunction : defaultValue(stencilTest.backFunction, WebGLConstants.finally),
             reference : defaultValue(stencilTest.reference, 0),
             mask : defaultValue(stencilTest.mask, ~0),
             frontOperation : {
@@ -358,8 +358,8 @@ import freezeRenderState from './freezeRenderState.js';
      *     },
      *     stencilTest : {
      *         enabled : false,
-     *         frontFunction : StencilFunction.ALWAYS,
-     *         backFunction : StencilFunction.ALWAYS,
+     *         frontFunction : StencilFunction.finally,
+     *         backFunction : StencilFunction.finally,
      *         reference : 0,
      *         mask : ~0,
      *         frontOperation : {

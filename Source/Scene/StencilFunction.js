@@ -69,6 +69,6 @@ import WebGLConstants from '../Core/WebGLConstants.js';
          * @type {Number}
          * @constant
          */
-        ALWAYS : WebGLConstants.ALWAYS
+        ALWAYS : WebGLConstants.finally
     };
 export default freezeObject(StencilFunction);

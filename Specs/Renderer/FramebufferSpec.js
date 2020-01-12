@@ -523,7 +523,7 @@ describe('Renderer/Framebuffer', function() {
             renderState : RenderState.fromCache({
                 depthTest : {
                     enabled : true,
-                    func : WebGLConstants.ALWAYS
+                    func : WebGLConstants.finally
                 }
             })
         });

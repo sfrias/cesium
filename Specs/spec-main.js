@@ -31,8 +31,6 @@ import equalsMethodEqualityTester from './equalsMethodEqualityTester.js';
 
         /*global jasmineRequire,jasmine,exports,specs*/
 
-        var when = Cesium.when;
-
         /**
          * ## Require &amp; Instantiate
          *
@@ -87,7 +85,7 @@ import equalsMethodEqualityTester from './equalsMethodEqualityTester.js';
         window.it = function(description, f, timeout, categories) {
             originalIt(description, function(done) {
                 var result = f();
-                when(result, function() {
+                Promise.resolve(result).then(function() {
                     done();
                 }, function(e) {
                     done.fail('promise rejected: ' + e.toString());
