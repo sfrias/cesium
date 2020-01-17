@@ -48,7 +48,7 @@ import freezeRenderState from './freezeRenderState.js';
                 (depthFunction === WebGLConstants.GREATER) ||
                 (depthFunction === WebGLConstants.NOTEQUAL) ||
                 (depthFunction === WebGLConstants.GEQUAL) ||
-                (depthFunction === WebGLConstants.finally));
+                (depthFunction === WebGLConstants.ALWAYS));
     }
 
     function validateStencilFunction(stencilFunction) {
@@ -59,7 +59,7 @@ import freezeRenderState from './freezeRenderState.js';
                 (stencilFunction === WebGLConstants.GREATER) ||
                 (stencilFunction === WebGLConstants.NOTEQUAL) ||
                 (stencilFunction === WebGLConstants.GEQUAL) ||
-                (stencilFunction === WebGLConstants.finally));
+                (stencilFunction === WebGLConstants.ALWAYS));
     }
 
     function validateStencilOperation(stencilOperation) {
@@ -141,8 +141,8 @@ import freezeRenderState from './freezeRenderState.js';
         };
         this.stencilTest = {
             enabled : defaultValue(stencilTest.enabled, false),
-            frontFunction : defaultValue(stencilTest.frontFunction, WebGLConstants.finally),
-            backFunction : defaultValue(stencilTest.backFunction, WebGLConstants.finally),
+            frontFunction : defaultValue(stencilTest.frontFunction, WebGLConstants.ALWAYS),
+            backFunction : defaultValue(stencilTest.backFunction, WebGLConstants.ALWAYS),
             reference : defaultValue(stencilTest.reference, 0),
             mask : defaultValue(stencilTest.mask, ~0),
             frontOperation : {

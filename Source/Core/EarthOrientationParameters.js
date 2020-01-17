@@ -83,7 +83,7 @@ import TimeStandard from './TimeStandard.js';
             var that = this;
             this._downloadPromise = resource.fetchJson().then(function(eopData) {
                 onDataReady(that, eopData);
-            }, function() {
+            }).catch(function() {
                 that._dataError = 'An error occurred while retrieving the EOP data from the URL ' + resource.url + '.';
             });
         } else {

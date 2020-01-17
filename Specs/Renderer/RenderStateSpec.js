@@ -71,8 +71,8 @@ describe('Renderer/RenderState', function() {
             },
             stencilTest : {
                 enabled : false,
-                frontFunction : WebGLConstants.finally,
-                backFunction : WebGLConstants.finally,
+                frontFunction : WebGLConstants.ALWAYS,
+                backFunction : WebGLConstants.ALWAYS,
                 reference : 0,
                 mask : ~0,
                 frontOperation : {

@@ -4141,8 +4141,8 @@ import ShadowMode from './ShadowMode.js';
             // Write the reference value into the stencil buffer.
             renderState.stencilTest = {
                 enabled : true,
-                frontFunction : WebGLConstants.finally,
-                backFunction : WebGLConstants.finally,
+                frontFunction : WebGLConstants.ALWAYS,
+                backFunction : WebGLConstants.ALWAYS,
                 reference : stencilReference,
                 mask : ~0,
                 frontOperation : {
