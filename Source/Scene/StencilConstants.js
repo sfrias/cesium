@@ -19,13 +19,13 @@ import StencilOperation from './StencilOperation.js';
     StencilConstants.setCesium3DTileBit = function() {
         return {
             enabled : true,
-            frontFunction : StencilFunction.finally,
+            frontFunction : StencilFunction.ALWAYS,
             frontOperation : {
                 fail : StencilOperation.KEEP,
                 zFail : StencilOperation.KEEP,
                 zPass : StencilOperation.REPLACE
             },
-            backFunction : StencilFunction.finally,
+            backFunction : StencilFunction.ALWAYS,
             backOperation : {
                 fail : StencilOperation.KEEP,
                 zFail : StencilOperation.KEEP,

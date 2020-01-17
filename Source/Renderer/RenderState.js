@@ -358,8 +358,8 @@ import freezeRenderState from './freezeRenderState.js';
      *     },
      *     stencilTest : {
      *         enabled : false,
-     *         frontFunction : StencilFunction.finally,
-     *         backFunction : StencilFunction.finally,
+     *         frontFunction : StencilFunction.ALWAYS,
+     *         backFunction : StencilFunction.ALWAYS,
      *         reference : 0,
      *         mask : ~0,
      *         frontOperation : {

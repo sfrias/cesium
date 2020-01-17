@@ -338,7 +338,7 @@ import Vector3DTileBatch from './Vector3DTileBatch.js';
     }
 
     function getStencilPreloadRenderState(mask3DTiles) {
-        var stencilFunction = mask3DTiles ? StencilFunction.EQUAL : StencilFunction.finally;
+        var stencilFunction = mask3DTiles ? StencilFunction.EQUAL : StencilFunction.ALWAYS;
         return {
             colorMask : {
                 red : false,
@@ -372,7 +372,7 @@ import Vector3DTileBatch from './Vector3DTileBatch.js';
     }
 
     function getStencilDepthRenderState(mask3DTiles) {
-        var stencilFunction = mask3DTiles ? StencilFunction.EQUAL : StencilFunction.finally;
+        var stencilFunction = mask3DTiles ? StencilFunction.EQUAL : StencilFunction.ALWAYS;
         return {
             colorMask : {
                 red : false,

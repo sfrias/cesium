@@ -353,7 +353,7 @@ import StencilOperation from './StencilOperation.js';
     };
 
     function getStencilPreloadRenderState(enableStencil, mask3DTiles) {
-        var stencilFunction = mask3DTiles ? StencilFunction.EQUAL : StencilFunction.finally;
+        var stencilFunction = mask3DTiles ? StencilFunction.EQUAL : StencilFunction.ALWAYS;
         return {
             colorMask : {
                 red : false,
@@ -387,7 +387,7 @@ import StencilOperation from './StencilOperation.js';
     }
 
     function getStencilDepthRenderState(enableStencil, mask3DTiles) {
-        var stencilFunction = mask3DTiles ? StencilFunction.EQUAL : StencilFunction.finally;
+        var stencilFunction = mask3DTiles ? StencilFunction.EQUAL : StencilFunction.ALWAYS;
         return {
             colorMask : {
                 red : false,
